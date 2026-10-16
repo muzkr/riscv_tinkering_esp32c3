@@ -8,4 +8,9 @@ It is expected that the file organization of this repository may be somewhat dis
 
 Some useful stuff:
 
-- [./chip.md](./chip.md): Notes on preliminary information gathering of ESP32-C3, relevant to my goals
+- [./chip.md](./chip.md): Preliminary information gathering of ESP32-C3, relevant to my goals
+- [./setup.md](./setup.md): Development environment setup
+
+## License
+
+Third-party artifacts have their respective licenses. Apart from that, this repository is [unlicensed](./LICENSE), and anyone can do whatever they like with it.

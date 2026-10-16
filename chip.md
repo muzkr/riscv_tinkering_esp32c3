@@ -13,13 +13,13 @@ IDF provides a GUI installer (called EIM) that supports mainstream operating sys
 - `tools` and `dist` directories, which EIM does not clearly explain. **These must be customized**, otherwise they will be installed under `~/.espressif` (even if a custom `.espressif` directory was specified above). These are the tool installation directory and the compressed package download directory, respectively
 - `~/.espressif`: There's not much content here, mainly EIM installation records and some scripts
 
-Basically, the entire IDF installation is a Python venv. Activate it by sourcing the script:
+Basically, the entire IDF installation is a Python venv. Activate it by sourcing the script, in my particular case:
 
 > ~/.espressif/tools/activate_idf_v6.1.sh
 
 Alternatively, after running EIM, it will list installed IDF versions and provide activation of the venv (which will open a terminal emulator).
 
-Currently, I feel I'll mainly use tools/openocd-esp32, which supports the ESP32-C3's unique USB serial/JTAG interface. For the toolchain, I'll use the RISC-V32 GCC provided by xpack. I might use a few other IDF tools, like `idf.py` and `espefuse`, etc. I'm not familiar with ESP32/IDF, so I'll explore gradually.
+Currently, I feel I'll mainly use tools/openocd-esp32, which supports the ESP32-C3's unique USB serial/JTAG interface. For the toolchain, I'll use the RISC-V32 GCC provided by xpack. I might use a few other IDF tools, like `idf.py` and `espefuse`, etc. I'm new to ESP32/IDF, so I'll explore gradually.
 
 ## The Chip
 
@@ -92,7 +92,7 @@ SRAM address mapping:
     0x3fce_0000 +-----------+ 0x403e_0000
 ```
 
-SRAM0 is used as flash cache
+SRAM0 is used as flash cache.
 
 Flash address mapping is realized by the MMU. The DBUS and IBUS each have 8 MB of address space. The flash physical addresses mapped by DBUS and IBUS don't need to be aligned or completely overlapping, so the maximum accessible physical flash size is 16 MB.
 
